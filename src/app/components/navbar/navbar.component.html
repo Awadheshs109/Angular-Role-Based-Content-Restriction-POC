@@ -1,0 +1,21 @@
+<header class="navbar">
+  <div class="nav-left">
+    <span class="logo">RBAC Demo</span>
+    <a routerLink="/">Home</a>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/settings">Settings</a>
+  </div>
+
+  <div class="nav-right" *ngIf="user?.username">
+    <div class="avatar-wrapper" (click)="toggleDropdown()">
+      <div class="avatar">{{ getInitials() }}</div>
+      <span class="arrow-icon">{{ showDropdown ? '▲' : '▼' }}</span>
+    </div>
+
+    <div class="dropdown" *ngIf="showDropdown">
+      <p><strong>{{ user.username }}</strong></p>
+      <p>Email: {{ user.emailId }}</p>
+      <p>Role: {{ user.roleType }}</p>
+    </div>
+  </div>
+</header>

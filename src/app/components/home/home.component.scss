@@ -1,0 +1,25 @@
+.card {
+  background: #fff;
+  border-left: 5px solid #007acc;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
