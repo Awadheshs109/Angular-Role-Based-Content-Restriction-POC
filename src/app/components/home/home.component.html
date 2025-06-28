@@ -1,5 +1,23 @@
+<h1>Role-Based-Content-Restriction-POC</h1>
+
+<div class="intro">
+  <p>
+    This Angular application demonstrates role-based content restriction using:
+  </p>
+  <ul>
+    <li><strong>APP_INITIALIZER</strong> to preload allowed content before app bootstraps</li>
+    <li><strong>AuthGuard</strong> to restrict unauthorized route access</li>
+    <li><strong>*showContent</strong> structural directive for role-specific content visibility</li>
+    <li>Simulated user and permission data using static JSON files (replaceable with real APIs)</li>
+  </ul>
+  <p>
+    Roles supported: <strong>Admin</strong> (full access), <strong>Internal</strong>, and <strong>External</strong> with partial access.
+  </p>
+</div>
+
+
 <div *showContent="'table 1'" class="card">
-  <h3> Data Table 1</h3>
+  <h3>Data Table 1</h3>
   <table>
     <thead>
       <tr><th>ID</th><th>Name</th><th>Status</th></tr>
@@ -12,7 +30,7 @@
 </div>
 
 <div *showContent="'table 2'" class="card">
-  <h3>Data Table 2 </h3>
+  <h3>Data Table 2</h3>
   <table>
     <thead>
       <tr><th>Code</th><th>Type</th><th>Quantity</th></tr>
